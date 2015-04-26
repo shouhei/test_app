@@ -14,3 +14,7 @@
 $app->get('/', function() use ($app) {
     return $app->welcome();
 });
+
+$app->get('/{str}', function($str) use ($app) {
+    return $str;
+});
