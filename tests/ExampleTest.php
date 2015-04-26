@@ -14,4 +14,10 @@ class ExampleTest extends TestCase {
         $this->assertResponseOk();
     }
 
+    public function testHello()
+    {
+        $response = $this->call('GET','/hogehoge');
+        $this->assertViewHas('hogehoge');
+    }
+
 }
