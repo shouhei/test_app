@@ -17,7 +17,8 @@ class ExampleTest extends TestCase {
     public function testHello()
     {
         $response = $this->call('GET','/hogehoge');
-        $this->assertViewHas('hogehoge');
+        var_dump($response->getContent());
+        $this->assertEquals('hogehoge',$response->getContent());
     }
 
 }
