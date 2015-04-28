@@ -17,7 +17,12 @@ class ExampleTest extends TestCase {
     public function testHello()
     {
         $response = $this->call('GET','/hogehoge');
-        var_dump($response->getContent());
+        $this->assertEquals('hogehoge',$response->getContent());
+    }
+
+    public function testPost()
+    {
+        $response = $this->call('POST', '/', ['name'=>'hogehoge']);
         $this->assertEquals('hogehoge',$response->getContent());
     }
 

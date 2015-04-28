@@ -18,3 +18,7 @@ $app->get('/', function() use ($app) {
 $app->get('/{str}', function($str) use ($app) {
     return $str;
 });
+
+$app->post('/', function() use($app){
+    return Request::input("name");
+});
