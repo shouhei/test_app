@@ -20,10 +20,4 @@ class ExampleTest extends TestCase {
         $this->assertEquals('hogehoge',$response->getContent());
     }
 
-    public function testPost()
-    {
-        $response = $this->call('POST', '/', ['name'=>'hogehoge']);
-        $this->assertEquals('hogehoge',$response->getContent());
-    }
-
 }
