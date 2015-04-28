@@ -16,5 +16,5 @@ $app->get('/', function() use ($app) {
 });
 
 $app->get('/{str}', function($str) use ($app) {
-    return $str;
+    return view("index",['message'=>$str]);
 });
